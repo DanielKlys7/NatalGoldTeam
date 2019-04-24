@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 200vh;
+    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    background-color: black;
+}
+
+body>.fas {
+    display: none;
+    color: gold;
+    font-size: 40px;
+    position: fixed;
+    right: 40px;
+    top: 33px;
+    z-index: 101;
+    cursor: pointer;
+}
+
+body>.active {
+    display: block;
+}
+
+nav {
+    display: block;
+    position: fixed;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: .5s;
+}
+
+nav.active {
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    padding-right: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gold;
+    font-size: 30px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+}
+
+nav ul li a::after {
+    content: "";
+    width: 80%;
+    position: absolute;
+    top: 75%;
+    left: 100%;
+    border-top: 3px solid gold;
+    transition: .5s;
+
+}
+
+nav ul li a:hover::after {
+    left: 10%;
+}
+
+header {
+    position: relative;
+    background-image: url(../img/bjjbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    z-index: 3;
+}
+
+header h1 {
+    color: white;
+    font-size: 80px;
+    padding: 0 80px 10px 80px;
+    border-bottom: 1px gold solid;
+    z-index: 3;
+    text-transform: uppercase;
+}
+
+header h1 span {
+    color: gold;
+}
+
+header ul {
+    z-index: 3;
+    list-style: none;
+    display: flex;
+}
+
+header ul li span {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+}
+
+header ul li span::after {
+    content: "\00B7";
+    color: gold;
+    padding: 0 45px;
+}
+
+header ul li:last-child span::after {
+    content: "";
+    padding: 0;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
