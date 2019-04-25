@@ -8,13 +8,12 @@ body {
     position: relative;
     display: flex;
     flex-flow: column wrap;
-    min-height: 200vh;
     font-family: 'Oswald', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
     background-color: black;
 }
 
-body>.fas {
+body div .fas {
     display: none;
     color: gold;
     font-size: 40px;
@@ -25,7 +24,7 @@ body>.fas {
     cursor: pointer;
 }
 
-body>.active {
+body div .active {
     display: block;
 }
 
@@ -138,4 +137,73 @@ header::before {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.about>div {
+    width: calc(100%/3);
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about>div>h2 {
+    display: none;
+    position: absolute;
+    top: 15%;
+    z-index: 5;
+}
+
+.about>div>p {
+    display: none;
+    position: absolute;
+    z-index: 5;
+}
+
+.about>div>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    transition: transform .4s;
+}
+
+.about>div:hover>img {
+    transform: scale(1.2);
+}
+
+.about>div:hover>h2 {
+    display: block;
+    color: gold;
+    font-size: 65px;
+    text-align: center;
+}
+
+.about>div:hover>p {
+    display: block;
+    margin: 0 15px;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+
+}
+
+
+.about>div:hover::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    Cursor: pointer;
 }
