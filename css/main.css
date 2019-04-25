@@ -28,6 +28,46 @@ body div .active {
     display: block;
 }
 
+
+@media (max-width: 414px) {
+    body div .fas {
+        right: 20px;
+        top: 20px;
+    }
+}
+
+
+
+@media (min-width: 415px) and (max-width: 768px) {
+    body div .fas {
+        font-size: 45px;
+        top: 45px;
+    }
+}
+
+@media (max-width: 731px) and (orientation: landscape) {
+    body div .fas {
+        font-size: 30px;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    body div .fas {
+        font-size: 60px;
+        top: 40px;
+    }
+}
+
+@media (min-width: 732px) and (max-width: 823px) and (orientation: landscape) {
+    body div .fas {
+        font-size: 42px;
+        right: 20px;
+        top: 20px;
+    }
+}
+
 nav {
     display: block;
     position: fixed;
@@ -49,6 +89,7 @@ nav ul {
     align-content: center;
     padding-right: 120px;
     background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
 nav ul li a {
@@ -75,6 +116,68 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
     left: 10%;
+}
+
+@media (max-width: 414px) {
+    nav {
+        top: -550px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding-right: 0;
+        display: flex;
+    }
+
+    nav ul li a {
+        border-bottom: 1px solid gold;
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 768px) {
+    nav ul li a {
+        font-size: 28px;
+        padding: 45px 20px;
+    }
+}
+
+@media (max-width: 731px) and (orientation: landscape) {
+    nav ul {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding-right: 90px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 20px 15px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+    nav ul li a {
+        font-size: 42px;
+        padding: 35px;
+    }
+}
+
+@media (min-width: 732px) and (max-width: 823px) and (orientation: landscape) {
+    nav ul {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding-right: 90px;
+    }
+
+    nav ul li a {
+        font-size: 28px;
+        padding: 20px 15px;
+    }
 }
 
 header {
@@ -139,6 +242,100 @@ header::before {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+@media (max-width: 414px) {
+    header h1 {
+        font-size: 34px;
+        padding: 10px 20px;
+    }
+
+    header ul li span {
+        font-size: 28px;
+    }
+
+    header ul li span::after {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width:415px) and (max-width: 768px) {
+    header ul li span::after {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 533px) and (orientation: landscape) {
+    header h1 {
+        font-size: 40px;
+        padding: 40px 20px 5px 20px;
+    }
+
+    header ul li span {
+        font-size: 25px;
+    }
+
+    header ul li span::after {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 534px) and (max-width: 731px) and (orientation: landscape) {
+    header h1 {
+        font-size: 38px;
+        padding: 5px 20px 5px 20px;
+    }
+
+    header ul li span {
+        font-size: 25px;
+    }
+
+    header ul li span::after {
+        padding: 0 20px;
+    }
+
+}
+
+@media (width: 568px) and (orientation: landscape) {
+    header h1 {
+        font-size: 34px;
+        padding: 0 20px 3px 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 80px;
+    }
+
+    header ul li span {
+        font-size: 60px;
+    }
+
+    header ul li span::after {
+        padding: 0 55px;
+    }
+
+    header {
+        background-image: url(../img/bjjbgipad.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 732px) and (max-width: 823px) and (orientation: landscape) {
+    header h1 {
+        font-size: 62px;
+        padding: 0 20px 5px 20px;
+    }
+
+    header ul li span {
+        font-size: 34px;
+    }
+
+    header ul li span::after {
+        padding: 0 35px;
+    }
+}
+
 .about {
     display: flex;
     flex-flow: row wrap;
@@ -152,17 +349,18 @@ header::before {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .about>div>h2 {
-    display: none;
+    color: transparent;
     position: absolute;
     top: 15%;
     z-index: 5;
 }
 
 .about>div>p {
-    display: none;
+    color: transparent;
     position: absolute;
     z-index: 5;
 }
