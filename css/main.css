@@ -11,9 +11,10 @@ body {
     font-family: 'Oswald', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
     background-color: black;
+    z-index: -1;
 }
 
-body div .fas {
+body .navbarToggle .fas {
     display: none;
     color: gold;
     font-size: 40px;
@@ -24,7 +25,7 @@ body div .fas {
     cursor: pointer;
 }
 
-body div .active {
+body .navbarToggle .active {
     display: block;
 }
 
@@ -183,6 +184,7 @@ nav ul li a:hover::after {
 header {
     position: relative;
     background-image: url(../img/bjjbg.jpg);
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -190,6 +192,7 @@ header {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 header img {
@@ -232,7 +235,7 @@ header ul li:last-child span::after {
     padding: 0;
 }
 
-header::before {
+header::after {
     content: "";
     position: absolute;
     top: 0;
@@ -240,6 +243,7 @@ header::before {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
 }
 
 @media (max-width: 414px) {
@@ -337,11 +341,86 @@ header::before {
 }
 
 .about {
+    box-sizing: content-box;
+    position: relative;
+    min-height: 120vh;
+    background-image: url(../img/bjjbg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20vh 0;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fill {
+    width: 35%;
+}
+
+.about h1 {
+    align-self: center;
+    color: white;
+    font-size: 80px;
+    padding: 0 80px 10px 80px;
+    border-bottom: 1px gold solid;
+    text-transform: uppercase;
+    flex-grow: 1;
+    text-align: center;
+    z-index: 1;
+}
+
+.about>.aboutContainer {
+    color: white;
+    width: 50%;
+    text-align: justify;
+    z-index: 1;
+}
+
+.about>.aboutContainer:nth-of-type(3),
+.about>.aboutContainer:nth-of-type(5) {
+    padding: 2% 4% 2% 8%;
+}
+
+.about>.aboutContainer:nth-of-type(4),
+.about>.aboutContainer:nth-of-type(6) {
+    padding: 2% 8% 2% 4%;
+}
+
+.about>.aboutContainer h2 {
+    font-size: 42px;
+    padding-bottom: 10px;
+    border-bottom: gold 1px solid;
+    padding-left: 20px;
+
+}
+
+.about>.aboutContainer h2 span {
+    color: gold;
+}
+
+.about>.aboutContainer p {
+    font-size: 24px;
+}
+
+.offer {
+    box-shadow: 0px -1px 22px -5px rgba(0, 0, 0, 0.56);
     display: flex;
     flex-flow: row wrap;
 }
 
-.about>div {
+.offer>div {
     width: calc(100%/3);
     height: 500px;
     overflow: hidden;
@@ -349,23 +428,29 @@ header::before {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.about>div>h2 {
+.offer>div>h2 {
     color: transparent;
     position: absolute;
-    top: 15%;
+    top: 6%;
     z-index: 5;
 }
 
-.about>div>p {
+.offer>div>p {
     color: transparent;
     position: absolute;
     z-index: 5;
+    padding-top: 30px;
 }
 
-.about>div>img {
+.offer>div>p>span>i {
+    display: none;
+    padding-right: 5px;
+    color: gold;
+}
+
+.offer>div>img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -374,28 +459,30 @@ header::before {
     transition: transform .4s;
 }
 
-.about>div:hover>img {
+.offer>div:hover p span i {
+    display: inline;
+}
+
+.offer>div:hover>img {
     transform: scale(1.2);
 }
 
-.about>div:hover>h2 {
-    display: block;
+.offer>div:hover>h2 {
     color: gold;
     font-size: 65px;
     text-align: center;
 }
 
-.about>div:hover>p {
-    display: block;
-    margin: 0 15px;
+.offer>div:hover>p {
+    padding: 18px;
     color: white;
-    font-size: 32px;
+    font-size: 20px;
     text-align: center;
 
 }
 
 
-.about>div:hover::after {
+.offer>div:hover::after {
     content: "";
     width: 100%;
     height: 100%;
