@@ -1,0 +1,157 @@
+$break-point-horizontal1: "(max-width: 731px) and (orientation: landscape)"
+$break-point-horizontal2: "(min-width: 732px) and (max-width: 823px) and (orientation: landscape)"
+$break-point-horizontal3: "(min-width: 824px) and (max-width: 1400px) and (orientation: landscape)"
+    
+body
+    .navbarToggle
+        .fas
+            display: none
+            color: gold
+            font-size: 40px
+            position: fixed
+            right: 40px
+            top: 33px
+            z-index: 101
+            cursor: pointer
+        .active
+            display: block
+    nav
+        display: block
+        position: fixed
+        top: -200px
+        left: 0
+        width: 100%
+        z-index: 100
+        transition: .5s
+        &.active
+            top: 0px
+        ul
+            list-style: none
+            +flex-display(row, flex-end)
+            align-content: center
+            padding-right: 120px
+            background-color: rgba(0, 0, 0, 0.5)
+            width: 100%
+            li
+                a
+                    text-decoration: none
+                    color: gold
+                    font-size: 30px
+                    position: relative
+                    overflow: hidden
+                    padding: 30px
+                    display: flex
+                    &::after
+                        content: ""
+                        width: 80%
+                        position: absolute
+                        top: 75%
+                        left: 100%
+                        border-top: 3px solid gold
+                        transition: .5s
+                    &:hover::after
+                        left: 10%
+
+@media #{$break-point1}
+    body
+        .navbarToggle
+            .fas
+                font-size: 35px
+                top: 20px
+                right: 20px
+        nav
+            top: -100vh
+            ul
+                padding: 0
+                flex-direction: column
+                background-color: rgba(0, 0, 0, 0.95)
+                li
+                    height: calc(100vh/5)
+                    border-top: 1px solid gold
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    a
+                        &::after
+                            content: ""
+                            border: none
+@media #{$break-point2}
+    body
+        .navbarToggle
+            .fas
+                right: 40px
+                top: 45px
+                font-size: 45px
+        nav
+            top: -100vh
+            ul
+                padding: 0
+                flex-direction: column
+                background-color: rgba(0, 0, 0, 0.95)
+                li
+                    height: calc(100vh/5)
+                    border-top: 1px solid gold
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    a
+                        &::after
+                            content: ""
+                            border: none
+@media #{$break-point3}
+    body
+        .navbarToggle
+            .fas
+                font-size: 80px
+                right: 30px
+                top: 30px
+        nav
+            ul
+                li
+                    +flex-display()
+                    a
+                        padding: 30px 20px
+                        font-size: 44px
+@media #{$break-point4}
+    body
+        .navbarToggle
+            .fas
+                font-size: 60px
+        nav
+            ul
+                li
+                    a
+                        padding: 40px
+@media #{$break-point-horizontal1}
+    body
+        .navbarToggle
+            .fas
+                font-size: 42px
+                top: 20px
+                right: 20px
+@media #{$break-point-horizontal2} 
+    body
+        .navbarToggle
+            .fas
+                top: 40px
+                right: 40px
+                font-size: 20px
+        nav
+            ul
+                li
+                    +flex-display()
+                    a
+                        font-size: 32px
+                        background-color: rgba(0, 0, 0, 0.9)
+@media #{$break-point-horizontal3} 
+    body
+        .navbarToggle
+            .fas
+                font-size: 58px
+        nav
+            ul
+                li
+                    a
+                        padding: 25px 40px
+
+                

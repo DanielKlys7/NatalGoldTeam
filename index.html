@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -19,11 +19,10 @@
     </div>
     <nav class="navburger">
         <ul>
-            <li><a href="#">O nas</a></li>
             <li><a href="#">Treningi</a></li>
-            <li><a href="#">Dzieci</a></li>
-            <li><a href="#">Galeria</a></li>
+            <li><a href="#">O nas</a></li>
             <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Znajdź nas!</a></li>
         </ul>
     </nav>
     <header id="header">
@@ -34,104 +33,177 @@
             <li><span>Grappling</span></li>
             <li><span>MMA</span></li>
         </ul>
+        <div class='icon-scroll'>
+        </div>
     </header>
-    <section class="offer" id="offer">
-        <div>
-            <img src="img/bjjoffer.jpg" alt="">
-            <h2>BJJ</h2>
-            <p>Brazylijski sport walki wywodzący się z judo i zapasów. Dzięki swojej skuteczności w walce na ziemi
-                trenowany przez zawodników MMA. Zakazane są wszelkie uderzenia i kopnięcia. <br><br>Polega na
-                sprowadzeniu
-                przeciwnika na ziemię, zdobyciu dominującej pozycji, a następnie na zmuszeniu do poddania się przez
-                założenie różnego typu dźwigni na stawy lub duszeń. </p>
+    <section class="offer">
+        <div class="sportPanels">
+            <div class="bjj sportPanel">
+                <img src="img/big/bjj.jpg" alt="">
+                <div class="description">
+                    <h1>bjj</h1>
+                    <p>Brazylijski sport walki wywodzący się z judo i zapasów. Dzięki swojej skuteczności w walce na
+                        ziemi
+                        trenowany przez zawodników MMA.
+                        Zakazane są wszelkie uderzenia i kopnięcia. Polega na sprowadzeniu przeciwnika na ziemię,
+                        zdobyciu
+                        dominującej pozycji, a następnie na zmuszeniu do poddania się przez założenie różnego typu
+                        dźwigni
+                        na stawy lub duszeń.</p>
+                </div>
+            </div>
+            <div class="mt sportPanel">
+                <img src="img/big/mt.jpg" alt="">
+                <div class="description">
+                    <h1>Muay thai</h1>
+                    <p>Cechami wyróżniającymi boks tajski na tle innych popularnych stylów jest szerokie użycie uderzeń
+                        łokciami i kolanami. Tego rodzaju uderzenia niejednokrotnie skutkują szybkimi nokautami. W
+                        boksie
+                        tajskim kładzie się
+                        również szczególny nacisk na używanie niskich kopnięć okrężnych.</p>
+                </div>
+            </div>
+            <div class="mma sportPanel">
+                <img src="img/big/mma.jpg" alt="">
+                <div class="description">
+                    <h1>Mma</h1>
+                    <p>MMA czyli mieszane sztuki walk. Formuła walk, w której zawodnicy różnych dyscyplin walczą wręcz
+                        przy
+                        dużym zakresie dozwolonych technik. Dopuszczane są wszystkie dozwolone techniki w innych
+                        sportach.
+                    </p>
+                </div>
+            </div>
+            <div class="boxing sportPanel">
+                <img src="img/big/boxing.jpg" alt="">
+                <div class="description">
+                    <h1>Boks</h1>
+                    <p>Walka na pięści jest jednym z najstarszych sportów, znanym już w starożytnej Grecji i Rzymie.
+                        Ciosy bokserskie są podstawowym elementem w walkach MMA.</p>
+                </div>
+            </div>
+            <div class="individual sportPanel">
+                <img src="img/big/individual.jpg" alt="">
+                <div class="description">
+                    <h1>trening indywidualny</h1>
+                    <p>W naszym klubie istnieje możliwość zorganizowania treningów personalnych lub dla grup
+                        zamkniętych.
+                    </p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btnWhen">Kiedy trenujemy?</button>
+                <button class="btnPrice">Ile to kosztuje?</button>
+            </div>
         </div>
-        <div>
-            <img src="img/mtoffer.jpg"">
-            <h2>Muay Thai</h2>
-            <p>Cechami wyróżniającymi boks tajski na tle innych popularnych stylów jest szerokie użycie uderzeń łokciami
-                i kolanami.
-                Tego rodzaju uderzenia niejednokrotnie skutkują szybkimi nokautami. W boksie tajskim kładzie się również
-                szczególny nacisk na używanie niskich kopnięć okrężnych.</p>
-        </div>
-        <div>
-            <img src=" img/boxingoffer.jpg" alt="">
-            <h2>Boxing</h2>
-            <p>Walka na pięści jest jednym z najstarszych sportów, znanym już w starożytnej Grecji i Rzymie.
-                Ciosy bokserskie są podstawowym elementem w walkach MMA.</p>
-        </div>
-        <div>
-            <img src="img/mmaoffer.jpg" alt="">
-            <h2>MMA</h2>
-            <p>Czyli mieszane sztuki walk. Formuła walk, w której zawodnicy różnych dyscyplin walczą wręcz przy
-                dużym zakresie dozwolonych technik. Dopuszczane są wszystkie dozwolone techniki w innych sportach.
-                Rywalizacja toczy się zarówno w stójce, jak i klinczu, a dozwolone są wszelkie rzuty, uderzenia,
-                kopnięcia, dźwignie i duszenia.
-                <br><br> Zapraszamy osoby zainteresowane treningami rekreacyjnymi oraz karierą zawodową.</p>
-        </div>
-        <div><img src="img/gymoffer.jpg" alt="">
-            <h2>Gym</h2>
-            <p>Treningi kondycyjne to nie tylko obowiązkowa pozycja w grafiku każdego fightera, ale również osób
-                chcących zrzucić zbędne kilogramy, zwiększyć swoją siłę funkcjonalną i
-                wytrzymałość.
-                Intensywne zajęcia prowadzone są przy użyciu między innymi odważników typu kettlebell, sztang, drążków,
-                piłek szwedzkich i lekarskich.<br><br>
-                Zapraszamy wszystkich Panów i Panie na ostry wycisk.</p>
-        </div>
-        <div>
-            <img src="img/loneoffer.jpg" alt="">
-            <h2>Individual</h2>
-            <p>W naszym klubie istnieje możliwość zorganizowania treningów personalnych lub dla grup zamkniętych.
-                <br><br>Szczegółowe informacje:<br>
-                <span><i class="fas fa-phone"></i>515-516-047</span><br>
-                <span><i class="fas fa-envelope"></i>kontakt@natalgoldteam.pl</span>
-            </p>
+        <div class="wrapDown">
+            <table class="calendarTable">
+                <tr>
+                    <th>Poniedziałek</th>
+                    <th>Wtorek</th>
+                    <th>Środa</th>
+                    <th>Czwartek</th>
+                    <th>Piątek</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>18:00 - 19:00<br>BJJ NO GI<br>wszyscy</td>
+                    <td></td>
+                    <td>18:00 - 19:00<br>MUAY THAI<br>wszyscy</td>
+                    <td>18:00 - 19:00<br>BJJ GI<br>wszyscy</td>
+                </tr>
+                <tr>
+                    <td>19:00 - 20:15<br>BJJ NO GI<br>wszyscy</td>
+                    <td>19:00 - 20:00<br>BJJ NO GI<br>początkujący<br>średniozaawansowani</td>
+                    </td>
+                    <td>19:00 - 20:15<br>BJJ GI<br>wszyscy</td>
+                    <td>19:00 - 20:00<br>BJJ NO GI<br>początkujący<br>średniozaawansowani</td>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20:30-21:30<br>BOKS<br>początkujący<br>średniozaawansowani</td>
+                    <td></td>
+                    <td>20:30-21:30<br>BOKS<br>początkujący<br>średniozaawansowani</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
     </section>
-    <section class="about" id="about">
-        <div class="fill"></div>
-        <h1>O nas</h1>
-        <div class="fill"></div>
-        <div class="aboutContainer">
-            <h2><span>J</span>orge "Macaco" Patino</h2>
-            <p>Założycielem oraz głównym trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino. Posiadacz czarnego
-                pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło czterdziestoma stoczonymi
-                pojedynkami, z czego ponad dwadzieścia walk wygranych w mniej niż minutę.Założycielem oraz głównym
-                trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino. Posiadacz czarnego
-                pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło czterdziestoma stoczonymi
-                pojedynkami, z czego ponad dwadzieścia walk wygranych w mniej niż minutę.
-            </p>
-        </div>
-
-        <div class="aboutContainer">
-            <h2><span>J</span>orge "Macaco" Patino</h2>
-            <p>Założycielem oraz głównym trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino. Posiadacz czarnego
-                pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło czterdziestoma stoczonymi
-                pojedynkami, z czego ponad dwadzieścia walk wygranych w mniej niż minutę. Założycielem oraz głównym
-                trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino. Posiadacz czarnego
-                pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło czterdziestoma stoczonymi
-                pojedynkami, z czego ponad dwadzieścia walk wygranych w mniej niż minutę.
-            </p>
-        </div>
-        <div class="aboutContainer">
-            <h2><span>M</span>ariusz "Manolo" Linke</h2>
-            <p>Opiekunem naszego klubu jest Mariusz Linke, pierwszy w Polsce czarny pas brazylijskiego jiu jitsu.
-                Wielokrotny medalista Mistrzostw Europy, Mistrzostw Świata CBJJE, NAGA. Czarny pas judo. Rekord MMA
-                10-5. Założycielem oraz głównym trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino. Posiadacz
-                czarnego
-                pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło czterdziestoma stoczonymi
-                pojedynkami, z czego ponad dwadzieścia walk wygranych w mniej niż minutę.</p>
-        </div>
-        <div class="aboutContainer">
-            <h2><span>M</span>ariusz "Manolo" Linke</h2>
-            <p>Opiekunem naszego klubu jest Mariusz Linke, pierwszy w Polsce czarny pas brazylijskiego jiu jitsu.
-                Wielokrotny medalista Mistrzostw Europy, Mistrzostw Świata CBJJE, NAGA. Czarny pas judo. Rekord MMA
-                10-5. Założycielem oraz głównym trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino. Posiadacz
-                czarnego
-                pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło czterdziestoma stoczonymi
-                pojedynkami, z czego ponad dwadzieścia walk wygranych w mniej niż minutę.</p>
+    <section class="about">
+        <h1 class="header"><span class="gold">gold</span> team</h1>
+        <div class="trainers">
+            <div class="macaco">
+                <h1>Jorge <span class="gold">"Macaco"</span> Patino</h1>
+                <p>
+                    Założycielem oraz głównym trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino.
+                    Posiadacz czarnego pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło
+                    czterdziestoma stoczonymi pojedynkami, ponad 20 walk wygranych w mniej niż minutę.
+                </p>
+            </div>
+            <div class="manolo">
+                <h1>Mariusz <span class="gold">"Manolo"</span> Linke</h1>
+                <p>
+                    Opiekunem naszego klubu jest Mariusz Linke, pierwszy w Polsce czarny pas brazylijskiego
+                    jiu jitsu. Wielokrotny medalista Mistrzostw Europy, Mistrzostw Świata CBJJE, NAGA. Czarny pas judo.
+                    Rekord MMA 10-5.
+                </p>
+            </div>
         </div>
     </section>
-
+    <section class="contact">
+        <h1>Masz do <span class="contactGold">nas</span> jakieś pytanie?</h1>
+        <h3>Napisz! Na pewno oddzwonimy!</h3>
+        <form action="https://formspree.io/danielklys7@gmail.com" method="POST">
+            <label for="imię">Imię:</label>
+            <input placeholder="Imię.." type="text" name="imię" required>
+            <label for="email">E-mail:</label>
+            <input placeholder="Twój@email.com.." type="email" name="email" required>
+            <label for="numerTel">Numer telefonu:</label>
+            <input placeholder="Np. 123456789" type="tel" name="numerTel" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" required>
+            <label for="wiadomosc">Twoja wiadomość:</label>
+            <textarea placeholder="Napisz do nas.." name="wiadomosc" id="msg"></textarea>
+            <button type="submit">Wyślij!</button>
+        </form>
+    </section>
+    <section class="findUs">
+        <div class="map-responsive">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10213.897681251716!2d18.9723474!3d50.2083544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cb02671e5453f65!2sNatal%20Gold%20Team!5e0!3m2!1spl!2spl!4v1567609224135!5m2!1spl!2spl"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+            </iframe>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="logo">
+                <img src="img/logo_glowne.png" alt="">
+            </div>
+            <div class="footerMain">
+                <div class="footerContact">
+                    <div class="footerContact--email">
+                        <p><i class="fas fa-mobile-alt"></i> 111-111-111</p>
+                    </div>
+                    <div class="footerContact--phone">
+                        <p><i class="fas fa-envelope"></i> placeholder@email.pl</p>
+                    </div>
+                </div>
+                <div class="socials">
+                    <a href="https://www.facebook.com/NatalGoldTeam/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="http://m.me/natalgoldteam" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+                    <a href="https://www.instagram.com/natalgoldteam/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="clause">
+                    <p>&copy; Copyright 2019. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="gg">
+                <h1><span class="bluetext">Odwiedź</span> też:</h1>
+                <a href="https://groundgame.com/" target="_blank"><img src="img/logogg.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
     <script src="javascript/script.js"></script>
 </body>
 

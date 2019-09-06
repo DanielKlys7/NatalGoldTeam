@@ -1,0 +1,30 @@
+@import variables
+@import mixins
+@import keyframes
+
+
+*
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+body
+    position: relative
+    background-image: url(../img/groundgame.jpg)
+    background-attachment: fixed
+    background-position: center
+    background-repeat: no-repeat
+    z-index: -1
+    font-family: 'Oswald', sans-serif
+    +flex-display(column, flex-start, wrap)
+
+@import nav
+@import header
+@import offer
+@import about
+@import contact
+@import findUs
+@import footer
+
+
+
