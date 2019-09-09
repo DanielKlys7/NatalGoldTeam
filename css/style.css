@@ -33,6 +33,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   background-image: url(../img/groundgame.jpg);
@@ -53,6 +57,12 @@ body {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  body {
+    background-image: url(../img/groundgameipad.jpg);
+  }
 }
 
 body .navbarToggle .fas {
@@ -505,19 +515,34 @@ header::after {
   }
 }
 
+@media (width: 812px) and (orientation: landscape) {
+  header {
+    background-image: url(../img/bjjbgipad.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  header h1 {
+    font-size: 60px;
+  }
+  header ul li span {
+    font-size: 20px;
+  }
+  header ul li span::after {
+    padding: 0 55px;
+  }
+  header div {
+    display: none;
+  }
+}
+
 section.offer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   padding: 10vh 0 20vh 0;
   background-color: black;
@@ -533,11 +558,14 @@ section.offer .sportPanels {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 section.offer .sportPanels .sportPanel {
@@ -594,28 +622,25 @@ section.offer .sportPanels .sportPanel div.description p {
   padding: 10px;
 }
 
-section.offer .sportPanels > div.buttons {
+section.offer > div.buttons {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 30%;
-  margin: 1.33%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60%;
+  margin: 0 20% 10px 20%;
 }
 
-section.offer .sportPanels > div.buttons button {
-  width: 50%;
-  margin-top: 80px;
+section.offer > div.buttons button {
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 25px;
   padding: 15px 20px;
   background-color: transparent;
   border: 2px solid gold;
@@ -627,7 +652,7 @@ section.offer .sportPanels > div.buttons button {
   font-weight: 700;
 }
 
-section.offer .sportPanels > div.buttons button:hover {
+section.offer > div.buttons button:hover {
   background-color: gold;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -635,8 +660,8 @@ section.offer .sportPanels > div.buttons button:hover {
 }
 
 section.offer .wrapDown {
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .2s;
+  transition: .2s;
   height: 0vh;
   width: 100%;
   background-color: black;
@@ -670,54 +695,545 @@ section.offer .wrapDown .calendarTable td {
   height: 100px;
 }
 
-@media (max-width: 414px) and (orientation: portrait) {
-  section.offer > div {
+section.offer .wrapDown .price {
+  font-size: 28px;
+  color: gold;
+}
+
+section.offer .wrapDown .price th {
+  padding: 20px;
+}
+
+section.offer .wrapDown .price td {
+  text-align: center;
+}
+
+section.offer .wrapDown .price td span {
+  font-size: 14px;
+}
+
+section.offer .wrapedDown {
+  height: 50vh;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  section.offer {
+    padding: 0 0 20vh 0;
+  }
+  section.offer .sportPanels {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100vw;
   }
-  section.offer > div div {
-    width: 100%;
-  }
-  section.offer > div div.description {
+  section.offer .sportPanels .sportPanel {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 50%;
+    z-index: 1;
+    margin: 0;
+  }
+  section.offer .sportPanels .sportPanel img {
+    max-width: 100%;
+  }
+  section.offer .sportPanels .sportPanel div.description {
+    min-height: auto;
+  }
+  section.offer .sportPanels .sportPanel div.description h1 {
+    color: gold;
+    font-size: 32px;
+  }
+  section.offer .sportPanels .sportPanel div.description p {
+    border-top: 3px solid gold;
+    font-size: 22px;
+  }
+  section.offer > div.buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 30px;
   }
-  section.offer > div div.description h1 {
+  section.offer > div.buttons button {
+    z-index: 1;
+    width: 50%;
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px solid gold;
+    color: white;
+    font-size: 18px;
+  }
+  section.offer > div.buttons button:hover {
+    background-color: gold;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: black;
+  }
+  section.offer .wrapDown .calendarTable {
+    overflow: scroll;
+    font-size: 14px;
+  }
+  section.offer .wrapDown .calendarTable th {
+    color: gold;
+    margin-down: 3px;
+    font-size: 24px;
+  }
+  section.offer .wrapDown .calendarTable td {
+    border: 1px solid gold;
+    padding: 2px;
+    width: 200px;
+    height: 100px;
+  }
+  section.offer .wrapDown .price {
+    font-size: 14px;
+  }
+  section.offer .wrapDown .price th {
+    padding: 8px;
+  }
+  section.offer .wrapedDown {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  section.offer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    overflow: hidden;
+    padding: 0 0 30vh 0;
+    width: 100vw;
+  }
+  section.offer .sportPanels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100vw;
+  }
+  section.offer .sportPanels .sportPanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+  }
+  section.offer .sportPanels .sportPanel img {
+    max-width: 100%;
+  }
+  section.offer .sportPanels .sportPanel div.description h1 {
     color: gold;
     font-size: 32px;
-    border-bottom: 2px solid gold;
-    padding: 5px 25px;
-    text-transform: uppercase;
   }
-  section.offer > div div.description p {
-    padding: 40px;
-    font-size: 12px;
-    text-align: justify;
+  section.offer .sportPanels .sportPanel div.description p {
+    border-top: 3px solid gold;
+    font-size: 22px;
+  }
+  section.offer > div.buttons {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    margin: 0;
+  }
+  section.offer > div.buttons button {
+    z-index: 1;
+    width: 60%;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px solid gold;
     color: white;
+    font-size: 20px;
+  }
+  section.offer > div.buttons button:hover {
+    background-color: gold;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: black;
+  }
+  section.offer .wrapDown .calendarTable {
+    overflow: scroll;
+    font-size: 14px;
+  }
+  section.offer .wrapDown .calendarTable th {
+    color: gold;
+    margin-down: 3px;
+    font-size: 24px;
+  }
+  section.offer .wrapDown .calendarTable td {
+    border: 1px solid gold;
+    padding: 2px;
+    width: 200px;
+    height: 100px;
+  }
+  section.offer .wrapDown .price {
+    font-size: 14px;
+  }
+  section.offer .wrapDown .price th {
+    padding: 8px;
+  }
+  section.offer .wrapedDown {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+  section.offer {
+    width: 100vw;
+    padding-bottom: 40vh;
+  }
+  section.offer .sportPanels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.offer .sportPanels .sportPanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 48%;
+    z-index: 1;
+    margin: 1%;
+  }
+  section.offer .sportPanels .sportPanel img {
+    max-width: 100%;
+  }
+  section.offer .sportPanels .sportPanel div.description h1 {
+    color: gold;
+    font-size: 32px;
+  }
+  section.offer .sportPanels .sportPanel div.description p {
+    border-top: 3px solid gold;
+    font-size: 22px;
+  }
+  section.offer > div.buttons {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    margin: 0;
+  }
+  section.offer > div.buttons button {
+    width: 60%;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px solid gold;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+  }
+  section.offer > div.buttons button:hover {
+    background-color: gold;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: black;
+  }
+  section.offer .wrapDown .calendarTable {
+    overflow: scroll;
+    font-size: 14px;
+  }
+  section.offer .wrapDown .calendarTable th {
+    color: gold;
+    margin-down: 3px;
+    font-size: 24px;
+  }
+  section.offer .wrapDown .calendarTable td {
+    border: 1px solid gold;
+    padding: 2px;
+    width: 200px;
+    height: 100px;
+  }
+  section.offer .wrapDown .price {
+    font-size: 14px;
+  }
+  section.offer .wrapDown .price th {
+    padding: 8px;
+  }
+  section.offer .wrapedDown {
+    height: 120vh;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  section.offer {
+    width: 100vw;
+    padding-bottom: 40vh;
+  }
+  section.offer .sportPanels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.offer .sportPanels .sportPanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 48%;
+    z-index: 1;
+    margin: 1%;
+  }
+  section.offer .sportPanels .sportPanel img {
+    max-width: 100%;
+  }
+  section.offer .sportPanels .sportPanel div.description h1 {
+    color: gold;
+    font-size: 32px;
+  }
+  section.offer .sportPanels .sportPanel div.description p {
+    border-top: 3px solid gold;
+    font-size: 22px;
+  }
+  section.offer > div.buttons {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    margin: 0;
+  }
+  section.offer > div.buttons button {
+    width: 60%;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px solid gold;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+  }
+  section.offer > div.buttons button:hover {
+    background-color: gold;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: black;
+  }
+  section.offer .wrapDown .calendarTable {
+    overflow: scroll;
+    font-size: 14px;
+  }
+  section.offer .wrapDown .calendarTable th {
+    color: gold;
+    margin-down: 3px;
+    font-size: 24px;
+  }
+  section.offer .wrapDown .calendarTable td {
+    border: 1px solid gold;
+    padding: 2px;
+    width: 200px;
+    height: 100px;
+  }
+  section.offer .wrapDown .price {
+    font-size: 14px;
+  }
+  section.offer .wrapDown .price th {
+    padding: 8px;
+  }
+  section.offer .wrapedDown {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 1440px) and (orientation: landscape) {
+  section.offer {
+    width: 100vw;
+    padding-bottom: 40vh;
+  }
+  section.offer .sportPanels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.offer .sportPanels .sportPanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 48%;
+    z-index: 1;
+    margin: 1%;
+  }
+  section.offer .sportPanels .sportPanel img {
+    max-width: 100%;
+  }
+  section.offer .sportPanels .sportPanel div.description {
+    min-height: auto;
+    padding: 15px;
+  }
+  section.offer .sportPanels .sportPanel div.description h1 {
+    color: gold;
+    font-size: 32px;
+  }
+  section.offer .sportPanels .sportPanel div.description p {
+    border-top: 3px solid gold;
+    font-size: 22px;
+  }
+  section.offer > div.buttons {
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    margin: 0;
+  }
+  section.offer > div.buttons button {
+    width: 60%;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 2px solid gold;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+  }
+  section.offer > div.buttons button:hover {
+    background-color: gold;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    color: black;
+  }
+  section.offer .wrapDown .calendarTable {
+    overflow: scroll;
+    font-size: 14px;
+  }
+  section.offer .wrapDown .calendarTable th {
+    color: gold;
+    margin-down: 3px;
+    font-size: 24px;
+  }
+  section.offer .wrapDown .calendarTable td {
+    border: 1px solid gold;
+    padding: 2px;
+    width: 200px;
+    height: 100px;
+  }
+  section.offer .wrapDown .price {
+    font-size: 14px;
+  }
+  section.offer .wrapDown .price th {
+    padding: 8px;
+  }
+  section.offer .wrapedDown {
+    height: 40vh;
   }
 }
 
@@ -801,6 +1317,239 @@ section.offer .wrapDown .calendarTable td {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 0;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .about {
+    padding: 0% 0% 4%;
+    max-width: 100vw;
+  }
+  .about .header {
+    font-size: 66px;
+    margin: 3vh 0 0 0;
+  }
+  .about .header .gold {
+    color: gold;
+  }
+  .about .trainers {
+    font-size: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about .trainers div {
+    width: 90%;
+    margin: 2% 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .trainers div h1 {
+    font-size: 32px;
+    margin: 0 25px;
+    border-bottom: 2px solid gold;
+  }
+  .about .trainers div p {
+    text-align: justify;
+  }
+  .about::after {
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  .about {
+    background-image: url(../img/groundgameipad.jpg);
+    padding: 0% 0% 4%;
+    max-width: 100vw;
+    min-height: 40vh;
+  }
+  .about .header {
+    font-size: 66px;
+    margin: 3vh 0 0 0;
+  }
+  .about .header .gold {
+    color: gold;
+  }
+  .about .trainers {
+    font-size: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .about .trainers div {
+    width: 90%;
+    margin: 2% 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .trainers div h1 {
+    font-size: 40px;
+    margin: 0 25px;
+    border-bottom: 2px solid gold;
+  }
+  .about .trainers div p {
+    font-size: 30px;
+    text-align: justify;
+  }
+  .about::after {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 145%;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  .about {
+    padding: 0 0 4%;
+    max-width: 100vw;
+    min-height: 70vh;
+  }
+  .about .header {
+    font-size: 66px;
+    margin: 3vh 0 0 0;
+  }
+  .about .header .gold {
+    color: gold;
+  }
+  .about .trainers {
+    font-size: 32px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .about .trainers div {
+    width: 90%;
+    margin: 2% 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .trainers div h1 {
+    font-size: 32px;
+    margin: 0 25px;
+    border-bottom: 2px solid gold;
+  }
+  .about .trainers div p {
+    font-size: 24px;
+    text-align: justify;
+  }
+  .about::after {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 155%;
+    top: -20%;
+  }
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+  .about {
+    padding: 0 0 4%;
+  }
+  .about .header {
+    font-size: 52px;
+    margin: 0 15px;
+  }
+  .about .header .gold {
+    color: gold;
+  }
+  .about .trainers {
+    width: 100%;
+  }
+  .about .trainers div {
+    width: 50%;
+  }
+  .about .trainers div h1 {
+    margin: 0 15px;
+    font-size: 30px;
+  }
+  .about .trainers div p {
+    font-size: 24px;
+  }
+  .about::after {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 175%;
+    top: -20%;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  .about {
+    padding: 0 0 4%;
+    min-height: 40vh;
+  }
+  .about .header {
+    font-size: 52px;
+    margin: 0 15px;
+  }
+  .about .header .gold {
+    color: gold;
+  }
+  .about .trainers {
+    width: 100%;
+  }
+  .about .trainers div {
+    width: 50%;
+  }
+  .about .trainers div h1 {
+    margin: 0 15px;
+    font-size: 30px;
+  }
+  .about .trainers div p {
+    font-size: 24px;
+  }
+  .about::after {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 175%;
+    top: -40%;
+  }
 }
 
 .contact {
@@ -917,6 +1666,66 @@ section.offer .wrapDown .calendarTable td {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 0;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  .contact {
+    background-image: url(../img/groundgameipad.jpg);
+  }
+  .contact form {
+    width: 70%;
+  }
+  .contact::after {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  .contact {
+    padding-top: 35vh;
+    max-width: 100vw;
+  }
+  .contact h1 {
+    text-align: center;
+    line-height: 100%;
+    padding: 0 20px;
+    font-size: 50px;
+  }
+  .contact h3 {
+    text-align: center;
+    line-height: 100%;
+    margin-top: 30px;
+  }
+  .contact form {
+    font-size: 32px;
+    margin: 4vh 0 6vh 0;
+    width: 80%;
+    font-family: 'Oswald', sans-serif;
+  }
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+  .contact {
+    padding-top: 40vh;
+    max-width: 100vw;
+  }
+  .contact h1 {
+    text-align: center;
+    line-height: 100%;
+    padding: 0 20px;
+    font-size: 50px;
+  }
+  .contact h3 {
+    text-align: center;
+    line-height: 100%;
+    margin-top: 30px;
+  }
+  .contact form {
+    font-size: 32px;
+    margin: 4vh 0 6vh 0;
+    width: 80%;
+    font-family: 'Oswald', sans-serif;
+  }
 }
 
 .map-responsive {
@@ -1072,5 +1881,120 @@ section.offer .wrapDown .calendarTable td {
 
 .footer .wrapper .gg h1 .bluetext {
   color: #00ADEE;
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+  .footer .wrapper {
+    width: 100%;
+  }
+  .footer .wrapper .logo {
+    width: 25%;
+    margin: 4% 0;
+  }
+  .footer .wrapper .logo img {
+    max-width: 90%;
+  }
+  .footer .wrapper .footerMain {
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .wrapper .footerMain .footerContact {
+    font-size: 32px;
+  }
+  .footer .wrapper .footerMain .socials {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  .footer .wrapper {
+    width: 100%;
+  }
+  .footer .wrapper .logo {
+    width: 35%;
+    margin: 4% 0;
+  }
+  .footer .wrapper .logo img {
+    max-width: 90%;
+  }
+  .footer .wrapper .footerMain {
+    width: 65%;
+  }
+  .footer .wrapper .footerMain .footerContact {
+    font-size: 26px;
+  }
+  .footer .wrapper .footerMain .socials {
+    font-size: 42px;
+  }
+  .footer .wrapper .gg {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .footer .wrapper {
+    width: 100%;
+  }
+  .footer .wrapper .logo {
+    width: 35%;
+    margin: 4% 0;
+  }
+  .footer .wrapper .logo img {
+    max-width: 90%;
+  }
+  .footer .wrapper .footerMain {
+    width: 65%;
+  }
+  .footer .wrapper .footerMain .footerContact {
+    font-size: 18px;
+  }
+  .footer .wrapper .footerMain .socials {
+    font-size: 36px;
+  }
+  .footer .wrapper .gg {
+    display: none;
+  }
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+  .footer {
+    max-width: 100vw;
+    height: 50vh;
+  }
+  .footer .wrapper {
+    width: 100%;
+  }
+  .footer .wrapper .logo {
+    width: 25%;
+    margin: 4% 0;
+  }
+  .footer .wrapper .logo img {
+    max-width: 90%;
+  }
+  .footer .wrapper .footerMain {
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .wrapper .footerMain .footerContact {
+    font-size: 22px;
+  }
+  .footer .wrapper .footerMain .socials {
+    font-size: 28px;
+  }
+  .footer .wrapper .gg a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .wrapper .gg a img {
+    max-width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

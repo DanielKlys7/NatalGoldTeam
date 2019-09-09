@@ -1,11 +1,13 @@
 section.offer
-    +flex-display(row, flex-start, wrap)
+    flex-flow: row wrap
+    justify-content: center
     position: relative
     padding: 10vh 0 20vh 0
     background-color: black
     clip-path: polygon(100% 95%, 0% 100%, 0% 0%, 100% 0%);
     .sportPanels
-        +flex-display(row, flex-start, wrap)
+        +flex-display(row, center, wrap)
+        align-items: flex-start
         .sportPanel
             +flex-display(row, center, wrap)
             width: 30%
@@ -28,31 +30,32 @@ section.offer
                     text-align: justify
                     color: white
                     padding: 10px
-        &>div.buttons
-            z-index: 1
-            display: flex
-            flex-direction: column
-            justify-content: flex-start
+    &>div.buttons
+        z-index: 1
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        width: 60%
+        margin: 0 20% 10px 20%
+        // align-items: space-around
+        button
             width: 30%
-            margin: 1.33%
-            align-items: center
-            button
-                width: 50%
-                margin-top: 80px
-                padding: 15px 20px
-                background-color: transparent
-                border: 2px solid gold
-                color: white
-                font-size: 24px
-                transition: .2s
-                cursor: pointer
-                font-weight: 700
-                &:hover
-                    background-color: gold
-                    transform: scale(1.1)
-                    color: black
+            margin-top: 20px
+            margin-bottom: 25px
+            padding: 15px 20px
+            background-color: transparent
+            border: 2px solid gold
+            color: white
+            font-size: 24px
+            transition: .2s
+            cursor: pointer
+            font-weight: 700
+            &:hover
+                background-color: gold
+                transform: scale(1.1)
+                color: black
     .wrapDown
-        transition: .4s
+        transition: .2s
         height: 0vh
         width: 100%
         background-color: black
@@ -72,29 +75,326 @@ section.offer
                 border: 1px solid gold
                 padding: 2px
                 width: 200px
-                height: 100px          
+                height: 100px     
+        .price
+            font-size: 28px
+            color: gold
+            th
+                padding: 20px
+            td
+                text-align: center
+                span
+                    font-size: 14px  
+    .wrapedDown
+        height: 50vh
 
-
-@media #{$break-point1}
+@media (max-width: 1200px) and (orientation: portrait)
     section.offer
-        &>div
-            +flex-display(column, center, nowrap)
-            div
-                width: 100%
-            div.description
-                +flex-display(column, center, nowrap)
-                align-items: center
-                padding: 30px
-                h1
+        padding: 0 0 20vh 0
+        .sportPanels
+            display: flex
+            flex-direction: row
+            max-width: 100vw
+            .sportPanel
+                box-sizing: border-box
+                padding: 15px
+                +flex-display(row, center, wrap)
+                width: 50%
+                z-index: 1
+                margin:  0
+                img
+                    max-width: 100%
+                div.description
+                    min-height: auto              
+                    h1
+                        color: gold
+                        font-size: 32px                      
+                    p
+                        border-top: 3px solid gold
+                        font-size: 22px
+        &>div.buttons
+            flex-direction: row
+            align-items: center
+            button
+                z-index: 1
+                width: 50%
+                margin: 10px
+                padding: 15px 20px
+                background-color: transparent
+                border: 2px solid gold
+                color: white
+                font-size: 18px
+                &:hover
+                    background-color: gold
+                    transform: scale(1.1)
+                    color: black
+        .wrapDown
+            .calendarTable
+                overflow: scroll
+                font-size: 14px
+                th
                     color: gold
-                    font-size: 32px
-                    border-bottom: 2px solid gold
-                    padding: 5px 25px
-                    text-transform: uppercase
-                p
-                    padding: 40px
-                    font-size: 12px
-                    text-align: justify
-                    color: white
-
-            
+                    margin-down: 3px
+                    font-size: 24px
+                td
+                    border: 1px solid gold
+                    padding: 2px
+                    width: 200px
+                    height: 100px     
+            .price
+                font-size: 14px
+                th
+                    padding: 8px
+        .wrapedDown
+            height: 35vh
+@media (max-width: 600px) and (orientation: portrait)
+    section.offer
+        flex-flow: column
+        overflow: hidden
+        padding: 0 0 30vh 0
+        width: 100vw
+        .sportPanels
+            display: flex
+            flex-direction: column
+            max-width: 100vw
+            .sportPanel
+                +flex-display(row, center, wrap)
+                width: 100%
+                z-index: 1
+                margin: 0
+                img
+                    max-width: 100%
+                div.description              
+                    h1
+                        color: gold
+                        font-size: 32px                      
+                    p
+                        border-top: 3px solid gold
+                        font-size: 22px
+        &>div.buttons
+            z-index: 1
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            width: 100vw
+            margin: 0
+            button
+                z-index: 1
+                width: 60%
+                padding: 15px 20px
+                background-color: transparent
+                border: 2px solid gold
+                color: white
+                font-size: 20px
+                &:hover
+                    background-color: gold
+                    transform: scale(1.1)
+                    color: black
+        .wrapDown
+            .calendarTable
+                overflow: scroll
+                font-size: 14px
+                th
+                    color: gold
+                    margin-down: 3px
+                    font-size: 24px
+                td
+                    border: 1px solid gold
+                    padding: 2px
+                    width: 200px
+                    height: 100px     
+            .price
+                font-size: 14px
+                th
+                    padding: 8px
+        .wrapedDown
+            height: 60vh
+@media (max-width: 823px) and (orientation: landscape)
+    section.offer
+        width: 100vw
+        padding-bottom: 40vh
+        .sportPanels
+            display: flex
+            flex-direction: row
+            max-width: 100vw
+            justify-content: center
+            .sportPanel
+                +flex-display(row, center, wrap)
+                width: 48%
+                z-index: 1
+                margin: 1%
+                img
+                    max-width: 100%
+                div.description              
+                    h1
+                        color: gold
+                        font-size: 32px                      
+                    p
+                        border-top: 3px solid gold
+                        font-size: 22px
+        &>div.buttons
+            z-index: 1
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            width: 100vw
+            margin: 0
+            button
+                width: 60%
+                padding: 15px 20px
+                background-color: transparent
+                border: 2px solid gold
+                color: white
+                font-size: 20px
+                z-index: 1
+                &:hover
+                    background-color: gold
+                    transform: scale(1.1)
+                    color: black
+        .wrapDown
+            .calendarTable
+                overflow: scroll
+                font-size: 14px
+                th
+                    color: gold
+                    margin-down: 3px
+                    font-size: 24px
+                td
+                    border: 1px solid gold
+                    padding: 2px
+                    width: 200px
+                    height: 100px     
+            .price
+                font-size: 14px
+                th
+                    padding: 8px
+        .wrapedDown
+            height: 120vh
+@media (max-width: 1200px) and (orientation: landscape)
+    section.offer
+        width: 100vw
+        padding-bottom: 40vh
+        .sportPanels
+            display: flex
+            flex-direction: row
+            max-width: 100vw
+            justify-content: center
+            .sportPanel
+                +flex-display(row, center, wrap)
+                width: 48%
+                z-index: 1
+                margin: 1%
+                img
+                    max-width: 100%
+                div.description              
+                    h1
+                        color: gold
+                        font-size: 32px                      
+                    p
+                        border-top: 3px solid gold
+                        font-size: 22px
+        &>div.buttons
+            z-index: 1
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            width: 100vw
+            margin: 0
+            button
+                width: 60%
+                padding: 15px 20px
+                background-color: transparent
+                border: 2px solid gold
+                color: white
+                font-size: 20px
+                z-index: 1
+                &:hover
+                    background-color: gold
+                    transform: scale(1.1)
+                    color: black
+        .wrapDown
+            .calendarTable
+                overflow: scroll
+                font-size: 14px
+                th
+                    color: gold
+                    margin-down: 3px
+                    font-size: 24px
+                td
+                    border: 1px solid gold
+                    padding: 2px
+                    width: 200px
+                    height: 100px     
+            .price
+                font-size: 14px
+                th
+                    padding: 8px
+        .wrapedDown
+            height: 50vh
+@media (max-width: 1440px) and (orientation: landscape)
+    section.offer
+        width: 100vw
+        padding-bottom: 40vh
+        .sportPanels
+            display: flex
+            flex-direction: row
+            max-width: 100vw
+            justify-content: center
+            .sportPanel
+                +flex-display(row, center, wrap)
+                width: 48%
+                z-index: 1
+                margin: 1%
+                img
+                    max-width: 100%
+                div.description    
+                    min-height: auto
+                    padding: 15px        
+                    h1
+                        color: gold
+                        font-size: 32px                      
+                    p
+                        border-top: 3px solid gold
+                        font-size: 22px
+        &>div.buttons
+            z-index: 1
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            width: 100vw
+            margin: 0
+            button
+                width: 60%
+                padding: 15px 20px
+                background-color: transparent
+                border: 2px solid gold
+                color: white
+                font-size: 20px
+                z-index: 1
+                &:hover
+                    background-color: gold
+                    transform: scale(1.1)
+                    color: black
+        .wrapDown
+            .calendarTable
+                overflow: scroll
+                font-size: 14px
+                th
+                    color: gold
+                    margin-down: 3px
+                    font-size: 24px
+                td
+                    border: 1px solid gold
+                    padding: 2px
+                    width: 200px
+                    height: 100px     
+            .price
+                font-size: 14px
+                th
+                    padding: 8px
+        .wrapedDown
+            height: 40vh

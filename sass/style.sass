@@ -4,10 +4,13 @@
 
 
 *
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
 body
     position: relative
     background-image: url(../img/groundgame.jpg)
@@ -17,6 +20,8 @@ body
     z-index: -1
     font-family: 'Oswald', sans-serif
     +flex-display(column, flex-start, wrap)
+    @media (max-width: 1200px) and (orientation: portrait)
+        background-image: url(../img/groundgameipad.jpg)
 
 @import nav
 @import header

@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Natal Gold Team</title>
+    <title>Natal Gold Team: klub sportów walki Katowice</title>
+    <meta name="description"
+        content="Strona poświęcona klubowi sportów walki Natal Gold Team znajdującemu się w Katowicach, Piotrowicach, zapisz się na zajęcia z brazylijskiego jiu-jitsu, muay-thai, mma lub boksu!">
+    <meta name="keywords"
+        content="Natal Gold Team, Katowice, Sporty walki, Bjj, brazylijskie jiu-jitsu, boks, mma, piotrowice, kostuchna, muay-thai, martial-arts">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145900841-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-145900841-1');
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1672301949683796');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1672301949683796&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -19,14 +68,15 @@
     </div>
     <nav class="navburger">
         <ul>
-            <li><a href="#">Treningi</a></li>
-            <li><a href="#">O nas</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Znajdź nas!</a></li>
+            <li><a href="#offer" class="navOption">Treningi</a></li>
+            <li><a href="#whenAndFor" class="navOption">Kiedy i za ile?</a></li>
+            <li><a href="#aboutUs" class="navOption">O nas</a></li>
+            <li><a href="#contact" class="navOption">Kontakt</a></li>
+            <li><a href="#findUs" class="navOption">Znajdź nas!</a></li>
         </ul>
     </nav>
     <header id="header">
-        <img src="img/logo_glowne.png" alt="">
+        <img src="img/logo_glowne.png" alt="Logo Natal Gold Team">
         <h1>Natal <span>Gold</span> Team</h1>
         <ul>
             <li><span>Jiu Jitsu</span></li>
@@ -36,10 +86,10 @@
         <div class='icon-scroll'>
         </div>
     </header>
-    <section class="offer">
+    <section class="offer" id="offer">
         <div class="sportPanels">
             <div class="bjj sportPanel">
-                <img src="img/big/bjj.jpg" alt="">
+                <img src="img/big/bjj.jpg" alt="brazylijskie jiu-jitsu">
                 <div class="description">
                     <h1>bjj</h1>
                     <p>Brazylijski sport walki wywodzący się z judo i zapasów. Dzięki swojej skuteczności w walce na
@@ -53,7 +103,7 @@
                 </div>
             </div>
             <div class="mt sportPanel">
-                <img src="img/big/mt.jpg" alt="">
+                <img src="img/big/mt.jpg" alt="Muay thai">
                 <div class="description">
                     <h1>Muay thai</h1>
                     <p>Cechami wyróżniającymi boks tajski na tle innych popularnych stylów jest szerokie użycie uderzeń
@@ -64,7 +114,7 @@
                 </div>
             </div>
             <div class="mma sportPanel">
-                <img src="img/big/mma.jpg" alt="">
+                <img src="img/big/mma.jpg" alt="mma">
                 <div class="description">
                     <h1>Mma</h1>
                     <p>MMA czyli mieszane sztuki walk. Formuła walk, w której zawodnicy różnych dyscyplin walczą wręcz
@@ -75,7 +125,7 @@
                 </div>
             </div>
             <div class="boxing sportPanel">
-                <img src="img/big/boxing.jpg" alt="">
+                <img src="img/big/boxing.jpg" alt="boks">
                 <div class="description">
                     <h1>Boks</h1>
                     <p>Walka na pięści jest jednym z najstarszych sportów, znanym już w starożytnej Grecji i Rzymie.
@@ -83,7 +133,7 @@
                 </div>
             </div>
             <div class="individual sportPanel">
-                <img src="img/big/individual.jpg" alt="">
+                <img src="img/big/individual.jpg" alt="orzeł">
                 <div class="description">
                     <h1>trening indywidualny</h1>
                     <p>W naszym klubie istnieje możliwość zorganizowania treningów personalnych lub dla grup
@@ -91,10 +141,10 @@
                     </p>
                 </div>
             </div>
-            <div class="buttons">
-                <button class="btnWhen">Kiedy trenujemy?</button>
-                <button class="btnPrice">Ile to kosztuje?</button>
-            </div>
+        </div>
+        <div class="buttons" id="whenAndFor">
+            <button class="btnWhen">Kiedy trenujemy?</button>
+            <button class="btnPrice">Ile to kosztuje?</button>
         </div>
         <div class="wrapDown">
             <table class="calendarTable">
@@ -129,9 +179,56 @@
                     <td></td>
                 </tr>
             </table>
+            <table class="price">
+                <tr>
+                    <th></th>
+                    <th>Bjj, boks,<br> zapasy, muay-thai</th>
+                    <th>Bjj, boks,<br> zapasy, muay-thai, MMA</th>
+                </tr>
+                <tr>
+                    <td>OPEN</td>
+                    <td>120PLN</td>
+                    <td>140PLN</td>
+                </tr>
+                <tr>
+                    <td>OPEN DO 20 LAT</td>
+                    <td>100PLN</td>
+                    <td>120PLN</td>
+                </tr>
+                <tr>
+                    <td>12 TRENINGÓW</td>
+                    <td>110PLN</td>
+                    <td>130PLN</td>
+                </tr>
+                <tr>
+                    <td>4 TRENINGI</td>
+                    <td>70PLM</td>
+                    <td>90PLN</td>
+                </tr>
+                <tr>
+                    <td>OPEN KOBIETY</td>
+                    <td>70PLN</td>
+                    <td>90PLN</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>BJJ KIDS</td>
+                    <td>70PLN</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>BJJ KIDS <span>(rodzeństwo)</span></td>
+                    <td>100PLN</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
     </section>
-    <section class="about">
+    <section class="about" id="aboutUs">
         <h1 class="header"><span class="gold">gold</span> team</h1>
         <div class="trainers">
             <div class="macaco">
@@ -152,7 +249,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <h1>Masz do <span class="contactGold">nas</span> jakieś pytanie?</h1>
         <h3>Napisz! Na pewno oddzwonimy!</h3>
         <form action="https://formspree.io/danielklys7@gmail.com" method="POST">
@@ -167,7 +264,7 @@
             <button type="submit">Wyślij!</button>
         </form>
     </section>
-    <section class="findUs">
+    <section class="findUs" id="findUs">
         <div class="map-responsive">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10213.897681251716!2d18.9723474!3d50.2083544!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5cb02671e5453f65!2sNatal%20Gold%20Team!5e0!3m2!1spl!2spl!4v1567609224135!5m2!1spl!2spl"
@@ -178,7 +275,7 @@
     <footer class="footer">
         <div class="wrapper">
             <div class="logo">
-                <img src="img/logo_glowne.png" alt="">
+                <img src="img/logo_glowne.png" alt="logo natal gold team">
             </div>
             <div class="footerMain">
                 <div class="footerContact">
@@ -200,7 +297,7 @@
             </div>
             <div class="gg">
                 <h1><span class="bluetext">Odwiedź</span> też:</h1>
-                <a href="https://groundgame.com/" target="_blank"><img src="img/logogg.png" alt=""></a>
+                <a href="https://groundgame.com/" target="_blank"><img src="img/logogg.png" alt="logo groundgame"></a>
             </div>
         </div>
     </footer>
