@@ -59,6 +59,19 @@ body {
       flex-wrap: wrap;
 }
 
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../img/groundgame.jpg);
+  background-size: cover;
+}
+
 @media (max-width: 1200px) and (orientation: portrait) {
   body {
     background-image: url(../img/groundgameipad.jpg);
@@ -544,10 +557,11 @@ section.offer {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  padding: 10vh 0 20vh 0;
+  padding: 10vh 0 30vh 0;
   background-color: black;
   -webkit-clip-path: polygon(100% 95%, 0% 100%, 0% 0%, 100% 0%);
           clip-path: polygon(100% 95%, 0% 100%, 0% 0%, 100% 0%);
+  z-index: 15;
 }
 
 section.offer .sportPanels {
@@ -713,7 +727,7 @@ section.offer .wrapDown .price td span {
 }
 
 section.offer .wrapedDown {
-  height: 50vh;
+  height: 60vh;
 }
 
 @media (max-width: 1200px) and (orientation: portrait) {
@@ -811,7 +825,7 @@ section.offer .wrapedDown {
     padding: 8px;
   }
   section.offer .wrapedDown {
-    height: 35vh;
+    height: 40vh;
   }
 }
 
@@ -917,7 +931,7 @@ section.offer .wrapedDown {
     padding: 8px;
   }
   section.offer .wrapedDown {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -1021,7 +1035,7 @@ section.offer .wrapedDown {
     padding: 8px;
   }
   section.offer .wrapedDown {
-    height: 120vh;
+    height: 130vh;
   }
 }
 
@@ -1125,7 +1139,7 @@ section.offer .wrapedDown {
     padding: 8px;
   }
   section.offer .wrapedDown {
-    height: 50vh;
+    height: 60vh;
   }
 }
 
@@ -1233,7 +1247,7 @@ section.offer .wrapedDown {
     padding: 8px;
   }
   section.offer .wrapedDown {
-    height: 40vh;
+    height: 50vh;
   }
 }
 
@@ -1256,6 +1270,8 @@ section.offer .wrapedDown {
   background-repeat: no-repeat;
   padding: 0% 6% 10%;
   min-height: 100vh;
+  padding-top: 30vh;
+  margin-top: -30vh;
 }
 
 .about .header {
@@ -1321,7 +1337,7 @@ section.offer .wrapedDown {
 
 @media (max-width: 600px) and (orientation: portrait) {
   .about {
-    padding: 0% 0% 4%;
+    padding: 30vh 0% 4%;
     max-width: 100vw;
   }
   .about .header {
@@ -1374,7 +1390,7 @@ section.offer .wrapedDown {
 @media (max-width: 1200px) and (orientation: portrait) {
   .about {
     background-image: url(../img/groundgameipad.jpg);
-    padding: 0% 0% 4%;
+    padding: 30vh 0% 4%;
     max-width: 100vw;
     min-height: 40vh;
   }
@@ -1432,7 +1448,7 @@ section.offer .wrapedDown {
 
 @media (max-width: 1000px) and (orientation: portrait) {
   .about {
-    padding: 0 0 4%;
+    padding: 30vh 4%;
     max-width: 100vw;
     min-height: 70vh;
   }
@@ -1682,6 +1698,7 @@ section.offer .wrapedDown {
 
 @media (max-width: 1000px) and (orientation: portrait) {
   .contact {
+    margin-top: -30vh;
     padding-top: 35vh;
     max-width: 100vw;
   }

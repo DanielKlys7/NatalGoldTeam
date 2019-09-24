@@ -2,9 +2,10 @@ section.offer
     flex-flow: row wrap
     justify-content: center
     position: relative
-    padding: 10vh 0 20vh 0
+    padding: 10vh 0 30vh 0
     background-color: black
-    clip-path: polygon(100% 95%, 0% 100%, 0% 0%, 100% 0%);
+    clip-path: polygon(100% 95%, 0% 100%, 0% 0%, 100% 0%)
+    z-index: 15
     .sportPanels
         +flex-display(row, center, wrap)
         align-items: flex-start
@@ -86,7 +87,7 @@ section.offer
                 span
                     font-size: 14px  
     .wrapedDown
-        height: 50vh
+        height: 60vh
 
 @media (max-width: 1200px) and (orientation: portrait)
     section.offer
@@ -146,7 +147,7 @@ section.offer
                 th
                     padding: 8px
         .wrapedDown
-            height: 35vh
+            height: 40vh
 @media (max-width: 600px) and (orientation: portrait)
     section.offer
         flex-flow: column
@@ -209,7 +210,7 @@ section.offer
                 th
                     padding: 8px
         .wrapedDown
-            height: 60vh
+            height: 70vh
 @media (max-width: 823px) and (orientation: landscape)
     section.offer
         width: 100vw
@@ -271,7 +272,7 @@ section.offer
                 th
                     padding: 8px
         .wrapedDown
-            height: 120vh
+            height: 130vh
 @media (max-width: 1200px) and (orientation: landscape)
     section.offer
         width: 100vw
@@ -333,7 +334,7 @@ section.offer
                 th
                     padding: 8px
         .wrapedDown
-            height: 50vh
+            height: 60vh
 @media (max-width: 1440px) and (orientation: landscape)
     section.offer
         width: 100vw
@@ -397,4 +398,4 @@ section.offer
                 th
                     padding: 8px
         .wrapedDown
-            height: 40vh
+            height: 50vh
