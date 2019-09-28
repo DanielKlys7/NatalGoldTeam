@@ -38,25 +38,41 @@ const calendarTable = document.querySelector('.calendarTable')
 const priceDisplay = document.querySelector('.price')
 
 buttonWhen.addEventListener('click', () => {
-    priceDisplay.style.display = "none"
-    calendarTable.style.display = "block"
-    if (!iswrapDownToggled) {
-        displayDiv.classList.add("wrapedDown")
-        iswrapDownToggled = !iswrapDownToggled
-    } else {
+    if ((displayDiv.classList.contains('wrapedDown')) && (calendarTable.style.display === "none")) {
         displayDiv.classList.remove("wrapedDown")
-        iswrapDownToggled = !iswrapDownToggled
+        setTimeout(() => {
+            priceDisplay.style.display = "none"
+            calendarTable.style.display = "block"
+            displayDiv.classList.add("wrapedDown")
+        }, 200)
+    } else {
+        if (!displayDiv.classList.contains('wrapedDown')) {
+            priceDisplay.style.display = "none"
+            calendarTable.style.display = "block"
+            displayDiv.classList.add("wrapedDown")
+        } else {
+            displayDiv.classList.remove("wrapedDown")
+            priceDisplay.style.display = "none"
+        }
     }
 })
 
 buttonPrice.addEventListener('click', () => {
-    calendarTable.style.display = "none"
-    priceDisplay.style.display = "block"
-    if (!iswrapDownToggled) {
-        displayDiv.classList.add("wrapedDown")
-        iswrapDownToggled = !iswrapDownToggled
-    } else {
+    if ((displayDiv.classList.contains('wrapedDown')) && (priceDisplay.style.display === "none")) {
         displayDiv.classList.remove("wrapedDown")
-        iswrapDownToggled = !iswrapDownToggled
+        setTimeout(() => {
+            calendarTable.style.display = "none"
+            priceDisplay.style.display = "block"
+            displayDiv.classList.add("wrapedDown")
+        }, 200)
+    } else {
+        if (!displayDiv.classList.contains('wrapedDown')) {
+            calendarTable.style.display = "none"
+            priceDisplay.style.display = "block"
+            displayDiv.classList.add("wrapedDown")
+        } else {
+            displayDiv.classList.remove("wrapedDown")
+            calendarTable.style.display = "none"
+        }
     }
 })
