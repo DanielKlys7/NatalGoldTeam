@@ -21,6 +21,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145900841-1"></script>
     <script>
@@ -33,7 +34,6 @@
 
         gtag('config', 'UA-145900841-1');
     </script>
-    <!-- Facebook Pixel Code -->
     <script>
         ! function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
@@ -56,8 +56,10 @@
         fbq('init', '1672301949683796');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1672301949683796&ev=PageView&noscript=1" /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1672301949683796&ev=PageView&noscript=1" />
+    </noscript>
     <!-- End Facebook Pixel Code -->
 </head>
 
@@ -88,7 +90,7 @@
     </header>
     <section class="offer" id="offer">
         <div class="sportPanels">
-            <div class="bjj sportPanel">
+            <div data-aos="fade-up" data-aos-duration="1200" class="bjj sportPanel">
                 <img src="img/big/bjj.jpg" alt="brazylijskie jiu-jitsu" />
                 <div class="description">
                     <h3>bjj</h3>
@@ -102,7 +104,7 @@
                         na stawy lub duszeń.</p>
                 </div>
             </div>
-            <div class="mt sportPanel">
+            <div data-aos="fade-up" data-aos-duration="1200" class="mt sportPanel">
                 <img src="img/big/mt.jpg" alt="Muay thai" />
                 <div class="description">
                     <h3>Muay thai</h3>
@@ -113,7 +115,7 @@
                         również szczególny nacisk na używanie niskich kopnięć okrężnych.</p>
                 </div>
             </div>
-            <div class="mma sportPanel">
+            <div data-aos="fade-up" data-aos-duration="1200" class="mma sportPanel">
                 <img src="img/big/mma.jpg" alt="mma" />
                 <div class="description">
                     <h3>Mma</h3>
@@ -124,7 +126,7 @@
                     </p>
                 </div>
             </div>
-            <div class="boxing sportPanel">
+            <div data-aos="fade-up" data-aos-duration="1200" class="boxing sportPanel">
                 <img src="img/big/boxing.jpg" alt="boks" />
                 <div class="description">
                     <h3>Boks</h3>
@@ -132,7 +134,7 @@
                         Ciosy bokserskie są podstawowym elementem w walkach MMA.</p>
                 </div>
             </div>
-            <div class="individual sportPanel">
+            <div data-aos="fade-up" data-aos-duration="1200" class="individual sportPanel">
                 <img src="img/big/individual.jpg" alt="orzeł" />
                 <div class="description">
                     <h3>trening indywidualny</h3>
@@ -236,7 +238,7 @@
     <section class="about" id="aboutUs">
         <h2 class="header"><span class="gold">gold</span> team</h2>
         <div class="trainers">
-            <div class="macaco">
+            <div class="macaco" data-aos="fade-right">
                 <h3>Jorge <span class="gold">"Macaco"</span> Patino</h3>
                 <p>
                     Założycielem oraz głównym trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino.
@@ -244,7 +246,7 @@
                     czterdziestoma stoczonymi pojedynkami, ponad 20 walk wygranych w mniej niż minutę.
                 </p>
             </div>
-            <div class="manolo">
+            <div class="manolo" data-aos="fade-left">
                 <h3>Mariusz <span class="gold">"Manolo"</span> Linke</h3>
                 <p>
                     Opiekunem naszego klubu jest Mariusz Linke, pierwszy w Polsce czarny pas brazylijskiego
@@ -261,8 +263,8 @@
     </section>
     <section class="contact" id="contact">
         <h3 class="question">Masz do <span class="contactGold">nas</span> jakieś pytanie?</h3>
-        <h3>Napisz! Na pewno oddzwonimy!</h3>
-        <form action="https://formspree.io/danielklys7@gmail.com" method="POST">
+        <h3>Napisz! Na pewno się odezwiemy!</h3>
+        <form action="https://formspree.io/poczta@natalgoldteam.pl" method="POST">
             <label for="imię">Imię:</label>
             <input placeholder="Imię.." type="text" name="imię" required>
             <label for="email">E-mail:</label>
@@ -312,6 +314,10 @@
         </div>
     </footer>
     <script src="javascript/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
