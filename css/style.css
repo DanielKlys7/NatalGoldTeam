@@ -539,7 +539,7 @@ header::after {
   }
 }
 
-@media (min-width: 1367px) and (max-width: 1420px) and (orientation: landscape) {
+@media (min-width: 1200px) and (max-width: 1420px) and (orientation: landscape) {
   div {
     display: none;
   }
@@ -1253,7 +1253,7 @@ section.offer .wrapedDown {
     padding: 8px;
   }
   section.offer .wrapedDown {
-    height: 50vh;
+    height: 60vh;
   }
 }
 
@@ -1342,6 +1342,7 @@ section.offer .wrapedDown {
   .about {
     padding: 0% 0% 4%;
     max-width: 100vw;
+    overflow: hidden;
   }
   .about .header {
     font-size: 66px;
@@ -1396,6 +1397,7 @@ section.offer .wrapedDown {
     padding: 0% 0% 4%;
     max-width: 100vw;
     min-height: 40vh;
+    overflow: hidden;
   }
   .about .header {
     font-size: 66px;
@@ -1455,6 +1457,7 @@ section.offer .wrapedDown {
     padding: 0 0 4%;
     max-width: 100vw;
     min-height: 70vh;
+    overflow: hidden;
   }
   .about .header {
     font-size: 66px;
@@ -1512,6 +1515,7 @@ section.offer .wrapedDown {
 @media (max-width: 823px) and (orientation: landscape) {
   .about {
     padding: 0 0 4%;
+    overflow: hidden;
   }
   .about .header {
     font-size: 52px;
@@ -1541,6 +1545,39 @@ section.offer .wrapedDown {
 }
 
 @media (max-width: 1200px) and (orientation: landscape) {
+  .about {
+    padding: 0 0 4%;
+    min-height: 40vh;
+    overflow: hidden;
+  }
+  .about .header {
+    font-size: 52px;
+    margin: 0 15px;
+  }
+  .about .header .gold {
+    color: gold;
+  }
+  .about .trainers {
+    width: 100%;
+  }
+  .about .trainers div {
+    width: 50%;
+  }
+  .about .trainers div h3 {
+    margin: 0 15px;
+    font-size: 30px;
+  }
+  .about .trainers div p {
+    font-size: 24px;
+  }
+  .about::after {
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 175%;
+    top: 0%;
+  }
+}
+
+@media (max-width: 1300px) and (orientation: landscape) {
   .about {
     padding: 0 0 4%;
     min-height: 40vh;
