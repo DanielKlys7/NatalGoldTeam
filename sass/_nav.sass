@@ -10,7 +10,7 @@ body
             font-size: 40px
             position: fixed
             right: 40px
-            top: 33px
+            top: 25px
             z-index: 101
             cursor: pointer
         .active
@@ -30,13 +30,13 @@ body
             +flex-display(row, flex-end)
             align-content: center
             padding-right: 120px
-            background-color: rgba(0, 0, 0, 0.5)
+            background-color: rgba(0, 0, 0, 0.99)
             width: 100%
             li
                 a
                     text-decoration: none
                     color: gold
-                    font-size: 30px
+                    font-size:24px
                     position: relative
                     overflow: hidden
                     padding: 30px
@@ -64,9 +64,9 @@ body
             ul
                 padding: 0
                 flex-direction: column
-                background-color: rgba(0, 0, 0, 0.95)
+                background-color: rgba(0, 0, 0, 0.99)
                 li
-                    height: calc(100vh/5)
+                    height: calc(100vh/7)
                     border-top: 1px solid gold
                     display: flex
                     justify-content: center
@@ -87,9 +87,9 @@ body
             ul
                 padding: 0
                 flex-direction: column
-                background-color: rgba(0, 0, 0, 0.95)
+                background-color: rgba(0, 0, 0, 0.99)
                 li
-                    height: calc(100vh/5)
+                    height: calc(100vh/7)
                     border-top: 1px solid gold
                     display: flex
                     justify-content: center
@@ -102,7 +102,7 @@ body
     body
         .navbarToggle
             .fas
-                font-size: 80px
+                font-size: 30px
                 right: 30px
                 top: 30px
         nav
@@ -111,7 +111,7 @@ body
                     +flex-display()
                     a
                         padding: 30px 20px
-                        font-size: 44px
+                        font-size: 20px
 @media #{$break-point4}
     body
         .navbarToggle
@@ -142,7 +142,7 @@ body
                     +flex-display()
                     a
                         font-size: 32px
-                        background-color: rgba(0, 0, 0, 0.9)
+                        background-color: rgba(0, 0, 0, 0.99)
 @media #{$break-point-horizontal3} 
     body
         .navbarToggle

@@ -1,10 +1,25 @@
 section.offer
+    .pricing
+        padding: 100px 40px 200px
+        color: white
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        img
+            max-width: 100%
+        ul 
+            font-size: 24px
+            padding: 50px 0px
+            list-style: none
+            .question
+                color: gold
     flex-flow: row wrap
     justify-content: center
     position: relative
-    padding: 10vh 0 20vh 0
+    padding: 5vh 0 5vh 0
     background-color: black
-    clip-path: polygon(100% 95%, 0% 100%, 0% 0%, 100% 0%);
+    clip-path: polygon(100% 95%, 0% 100%, 0% 0%, 100% 0%)
     .sportPanels
         +flex-display(row, center, wrap)
         align-items: flex-start
@@ -16,7 +31,7 @@ section.offer
             img
                 max-height: 400px
             div.description
-                min-height: 30vh
+               
                 +flex-display(column, flex-start, nowrap)
                 text-align: left
                 h3
@@ -88,9 +103,13 @@ section.offer
     .wrapedDown
         height: 60vh
 
+    
+
 @media (max-width: 1200px) and (orientation: portrait)
     section.offer
-        padding: 0 0 20vh 0
+        .pricing
+            padding: 40px 20px 60px
+        padding: 5vh 0 5vh 0
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
         .sportPanels
             display: flex
@@ -150,9 +169,11 @@ section.offer
             height: 45vh
 @media (max-width: 600px) and (orientation: portrait)
     section.offer
+        .pricing
+            padding: 40px 20px 60px
         flex-flow: column
         overflow: hidden
-        padding: 0 0 10vh 0
+        padding: 5vh 0 5vh 0
         width: 100vw
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
         .sportPanels
@@ -214,6 +235,8 @@ section.offer
             height: 70vh
 @media (max-width: 823px) and (orientation: landscape)
     section.offer
+        .pricing
+            padding: 40px 20px 60px
         width: 100vw
         padding-bottom: 10vh
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
@@ -276,6 +299,8 @@ section.offer
         .wrapedDown
             height: 130vh
 @media (max-width: 1200px) and (orientation: landscape)
+    .pricing
+        padding: 40px 20px 60px
     section.offer
         width: 100vw
         padding-bottom: 10vh
@@ -339,6 +364,8 @@ section.offer
         .wrapedDown
             height: 60vh
 @media (max-width: 1280px) and (orientation: landscape)
+    .pricing
+        padding: 40px 20px 60px
     section.offer
         width: 100vw
         padding-bottom: 10vh
@@ -404,6 +431,8 @@ section.offer
             height: 70vh
 @media (min-width: 1281px) and (max-width: 1440px) and (orientation: landscape)
     section.offer
+        .pricing
+            padding: 40px 20px 60px
         width: 100vw
         padding-bottom: 10vh
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)

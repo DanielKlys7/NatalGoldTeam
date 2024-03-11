@@ -8,6 +8,7 @@ header
     background-attachment: fixed
     background-position: center
     background-repeat: no-repeat
+    background-size: cover
     height: 100vh
     +flex-display(column, center, wrap)
     align-items: center
@@ -93,11 +94,15 @@ header
             display: none
 @media #{$break-point2}
     header
+        h1
+            font-size: 20px
+            padding: 10px 20px
         ul
             li
                 span
+                    font-size: 32px
                     &::after
-                        padding: 0 40px
+                        padding: 0 15px
 @media #{$break-point3}
     header
         background-image: url(../img/bjjbgipad.webp)

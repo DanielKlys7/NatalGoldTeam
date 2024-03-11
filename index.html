@@ -71,8 +71,10 @@
   <nav class="navburger">
     <ul>
       <li><a href="#offer" class="navOption">Treningi</a></li>
-      <li><a href="#whenAndFor" class="navOption">Kiedy i za ile?</a></li>
       <li><a href="#aboutUs" class="navOption">O nas</a></li>
+      <li><a href="#pricing" class="navOption">Cennik</a></li>
+      <li><a href="#schedule" class="navOption">Grafik</a></li>
+      <li><a href="#faq" class="navOption">FAQ</a></li>
       <li><a href="#contact" class="navOption">Kontakt</a></li>
       <li><a href="#findUs" class="navOption">Znajdź nas!</a></li>
     </ul>
@@ -144,113 +146,95 @@
         </div>
       </div>
     </div>
-    <div class="buttons" id="whenAndFor">
-      <button class="btnWhen">Kiedy trenujemy?</button>
-      <button class="btnPrice">Ile to kosztuje?</button>
-    </div>
-    <div class="wrapDown">
-      <table class="calendarTable" style="display: block;">
-        <tbody>
-          <tr>
-            <th>Poniedziałek</th>
-            <th>Wtorek</th>
-            <th>Środa</th>
-            <th>Czwartek</th>
-            <th>Piątek</th>
-          </tr>
-          <tr>
-            <td>17:00 - 17:45<br />BJJ Kids<br />4-7lat</td>
-            <td>17:00 - 17:45<br />BJJ Kids<br />8-12lat</td>
-            <td>17:00 - 17:45<br />BJJ Kids<br />4-7lat</td>
-            <td>17:00 - 17:45<br />BJJ Kids<br />8-12lat</td>
-            <td></td>
-          </tr>
-          <tr>
-            <!--Godziny 18:00 - 19:00 kolejne dni tygodnia, poniedziałek, wtorek, środa, czwartek, piątek-->
-            <td>18:00 - 19:00<br />BJJ NOGI<br />początkujący</td>
-            <td>18:00 - 19:00<br />BJJ NO GI<br />zaawansowani</td>
-            <td>18:00 - 19:00<br />BJJ NOGI<br />początkujący</td>
-            <td>18:00 - 19:00<br />BJJ NO GI<br />zaawansowani</td>
-            <td>18:00 - 19:00<br />BJJ GI<br />wszyscy</td>
-          </tr>
-          <tr>
-            <!--Godziny 19:00 - 20:00/20:15 kolejne dni tygodnia, poniedziałek, wtorek, środa, czwartek, piątek-->
-            <td>19:00 - 20:15<br />BJJ NO GI<br />zaawansowani</td>
-            <td>19:00 - 20:00<br />MUAY THAI<br />początkujący<br>średniozaawansowani</td>
-            <td>19:00 - 20:15<br />BJJ GI<br />wszyscy</td>
-            <td>19:00 - 20:00<br />MUAY THAI<br />początkujący<br>średniozaawansowani</td>
-            <td> </td>
-          </tr>
-          <tr>
-            <!--Godziny  20:30 - 21:30 kolejne dni tygodnia, poniedziałek, wtorek, środa, czwartek, piątek-->
-            <td>20:30 - 21:30 <br />BOKS<br />początkujący<br />średniozaawansowani</td>
-            <td>20:00 - 21:00<br />ZAPASY</td>
-            <td>20:30 - 21:30 <br />BOKS<br />początkujący<br />średniozaawansowani</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="price" style="display: block;">
+    <div class="pricing">
+      <img src="img/cennik.png" alt="cennik" id="pricing"/>
+      <img src="img/grafik.png" alt="grafik zajęć" id="schedule"/>
+      <div id="faq">
+        <ul>
+          <li class="question">Gdzie mieści się klub?</li>
+          <li>
+            • Klub mieści się w budynku przy ul. Jankego 176 w Katowicach,
+            wejście od ul. Małachowskiego.
+          </li>
 
-        <tbody>
-          <tr>
-            <th>Karnet miesięczny</th>
-            <th>BJJ, Muay Thai<br /> Zapasy, Boks</th>
-          </tr>
-          <tr>
-            <td>Jednorazowa opłata rejestracyjna</td>
-            <td>20 PLN</td>
-          </tr>
-          <tr>
-            <td>OPEN</td>
-            <td>120 PLN</td>
-          </tr>
-          <tr>
-            <td>OPEN DO 20 LAT</td>
-            <td>100 PLN</td>
-          </tr>
-          <tr>
-            <td>12 TRENINGÓW</td>
-            <td>110 PLN</td>
-          </tr>
-          <tr>
-            <td>4 TRENINGI</td>
-            <td>70 PLN</td>
-          </tr>
-          <tr>
-            <td>OPEN KOBIETY</td>
-            <td>70 PLN</td>
-          </tr>
-          <tr>
-            <td>BJJ KIDS</td>
-            <td>70 PLN</td>
-          </tr>
-          <tr>
-            <td>BJJ KIDS <span>(rodzeństwo)</span></td>
-            <td>100 PLN</td>
-          </tr>
-        </tbody>
-      </table>
+          <li class="question">Co trzeba zabrać na pierwszy trening?</li>
+          <li>
+            • Na pierwszy trening potrzebny będzie strój sportowy oraz woda.
+            Ćwiczymy boso na macie zapaśniczej, koniecznie zabierz klapki do
+            poruszania się po klubie. Po zajęciach jest możliwość skorzystania
+            z prysznica.
+          </li>
+
+          <li class="question">Czy muszę się wcześniej zapisywać?</li>
+          <li>• Możesz dać nam znać, choć nie jest to koniecznie.</li>
+
+          <li class="question">Ile kosztuje uczestnictwo?</li>
+          <li>
+            • Pierwszy trening jest całkowicie bezpłatny. Podczas drugiej
+            wizyty należy zakupić karnet miesięczny, zgodnie z cennikiem. Do
+            zakupu karnetu konieczne jest założenie konta na naszym profilu
+            eFitness, abyśmy mogli Ci go dopisać.
+          </li>
+
+          <li class="question">
+            Czy muszę się jakoś przygotować do podjęcia treningów?
+          </li>
+          <li>
+            • Nie. Nasze zajęcia prowadzone są w formie rekreacyjnej. Słaba
+            kondycja fizyczna to domena początkujących, regularne treningi
+            sportów walki z pewnością ją poprawią.
+          </li>
+
+          <li class="question">
+            Czy wykupując karnet na określoną ilość wejść muszę zadeklarować
+            dyscyplinę?
+          </li>
+          <li>
+            • Karnet uprawnia do uczestniczenia w dowolnych treningach
+            oferowanych przez nasz klub o odpowiednim dla uczestnika poziomie
+            zaawansowania.
+          </li>
+
+          <li class="question">
+            Czy honorujecie jakieś systemy partnerskie?
+          </li>
+          <li>
+            • Tak, z naszych zajęć bezpłatnie skorzystasz za pośrednictwem
+            Benefit Systems Multisport oraz OK System.
+          </li>
+
+          <li class="question">
+            Czy są jakieś przeciwskazania odnośnie wieku?
+          </li>
+          <li>
+            • Poza przeciwskazaniami zdrowotnymi nie ma żadnych przeszkód, aby
+            rozpocząć treningi.
+          </li>
+
+          <li class="question">
+            Czy osoba zaczynająca treningi brazylijskiego jiu jitsu musi
+            zakupić kimono (GI)?
+          </li>
+          <li>
+            • Nie. Podstawy brazylijskiego jiu jitsu celowo prowadzone są w
+            odmianie bez kimon, aby nie generować kosztów związanych z
+            rozpoczęciem treningów.
+          </li>
+          <li class="question">W jakich godzinach otwarty jest klub?</li>
+          <li>• Nasz klub otwarty jest w godzinach zajęć grupowych.</li>
+        </ul>
+      </div>
     </div>
   </section>
+  <section>
+  </section>
   <section class="about" id="aboutUs">
-    <h2 class="header"><span class="gold">gold</span> team</h2>
+    <h2 class="header"><span class="gold">Grind</span> team</h2>
     <div class="trainers">
-      <div class="macaco" data-aos="fade-right">
-        <h3>Jorge <span class="gold">"Macaco"</span> Patino</h3>
+      <div class="manolo" data-aos="fade-up">
+        <h3>N<span class="gold">G</span>T</h3>
         <p>
-          Założycielem oraz głównym trenerem GOLD TEAM jest brazylijczyk Jorge "Macaco" Patino.
-          Posiadacz czarnego pasa w brazylijskim jiu jitsu trzeciego stopnia. Zawodnik MMA z przeszło
-          czterdziestoma stoczonymi pojedynkami, ponad 20 walk wygranych w mniej niż minutę.
-        </p>
-      </div>
-      <div class="manolo" data-aos="fade-left">
-        <h3>Mariusz <span class="gold">"Manolo"</span> Linke</h3>
-        <p>
-          Opiekunem naszego klubu jest Mariusz Linke, pierwszy w Polsce czarny pas brazylijskiego
-          jiu jitsu. Wielokrotny medalista Mistrzostw Europy, Mistrzostw Świata CBJJE, NAGA. Czarny pas judo.
-          Rekord MMA 10-5.
+          Jesteśmy samodzielnie działającym klubem sportów walki. Prowadzimy zajęcia dla dzieci i dorosłych, ich zakres obejmuje brazylijskie jiu jitsu, tajski boks, zapasy, boks oraz MMA. Choć zajęcia mają charakter rekreacyjny, część zawodników prowadzona jest wyczynowo. Odnosimy sukcesy na zawodach ogólnopolskich oraz europejskich. Nasi zawodnicy z powodzeniem startują w MMA.
         </p>
       </div>
     </div>
@@ -310,12 +294,13 @@
           <a href="https://www.instagram.com/natalgoldteam/" tabindex="3" title="Nasz instagram" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="clause">
-          <p>&copy; Copyright 2019. All rights reserved.</p>
+          <p>&copy; Copyright 2024. All rights reserved.</p>
         </div>
       </div>
       <div class="gg">
         <h4><span class="bluetext">Odwiedź</span> też:</h4>
         <a href="https://groundgame.com/" target="_blank"><img src="img/logogg.png" alt="logo groundgame"/></a>
+        <img src="img/plansza.png" class="pfr"/>
       </div>
     </div>
   </footer>
